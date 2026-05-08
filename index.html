@@ -8,8 +8,7 @@
 /* ====================================================================
    FIC 102 ENGINEERING PHYSICS - MASTER STYLESHEET
    Clean, Academic, Highly Readable Design
-==================================================================== 
-*/
+==================================================================== */
 :root {
   --primary: #1e3a8a;        /* Deep Blue */
   --primary-hover: #1e40af;
@@ -38,7 +37,7 @@ body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: var(--bg-color);
   color: var(--text-main);
-  font-size: 16px;
+  font-size: 16.5px;
   line-height: 1.7;
 }
 
@@ -48,9 +47,9 @@ body {
   color: #ffffff;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.header h1 { font-size: 36px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
+.header h1 { font-size: 38px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
 .header p { font-size: 18px; color: #bae6fd; font-weight: 500; }
 
 .nav {
@@ -85,14 +84,15 @@ body {
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 .card h2 { font-size: 28px; font-weight: 800; margin-bottom: 1.5rem; color: var(--primary); border-bottom: 3px solid #e2e8f0; padding-bottom: 10px; }
-.card h3 { font-size: 20px; font-weight: 700; margin-top: 2rem; margin-bottom: 12px; color: #334155; }
-.card p { margin-bottom: 16px; font-size: 16px; }
+.card h3 { font-size: 22px; font-weight: 700; margin-top: 2.5rem; margin-bottom: 12px; color: #334155; }
+.card h4 { font-size: 18px; font-weight: 700; margin-top: 1.5rem; margin-bottom: 8px; color: #475569; }
+.card p { margin-bottom: 16px; }
 .card ul, .card ol { margin-left: 24px; margin-bottom: 16px; }
 .card li { margin-bottom: 8px; }
 
 /* --- GRIDS --- */
-.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 16px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 16px;}
 .mini-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; }
 
 /* --- SPECIALIZED CONTENT BOXES --- */
@@ -102,7 +102,7 @@ body {
   border-radius: 0 8px 8px 0;
   padding: 20px 24px; margin: 24px 0;
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-  font-size: 16px; color: var(--formula-text); font-weight: 600;
+  font-size: 17px; color: var(--formula-text); font-weight: 600;
   line-height: 1.8;
   overflow-x: auto;
 }
@@ -114,11 +114,11 @@ body {
   border-radius: 8px; padding: 24px; margin: 24px 0;
 }
 .derivation-title {
-  font-size: 18px; font-weight: 800; color: var(--derivation-title); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;
+  font-size: 19px; font-weight: 800; color: var(--derivation-title); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;
   border-bottom: 2px solid #fde68a; padding-bottom: 8px;
 }
-.derivation-step { margin-bottom: 12px; }
-.derivation-step strong { color: #b45309; }
+.derivation-step { margin-bottom: 14px; }
+.derivation-step strong { color: #b45309; display: block; margin-bottom: 4px; font-size: 16px;}
 
 .numerical-box {
   background: var(--numerical-bg);
@@ -127,13 +127,14 @@ body {
   border-radius: 8px; padding: 24px; margin: 24px 0;
 }
 .numerical-title {
-  font-size: 18px; font-weight: 800; color: var(--numerical-title); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;
+  font-size: 19px; font-weight: 800; color: var(--numerical-title); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px;
   border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;
 }
-.num-given, .num-formula, .num-solve { margin-bottom: 12px; }
+.num-given { margin-bottom: 16px; font-weight: 500; }
+.num-solve { background: rgba(255,255,255,0.6); padding: 16px; border-radius: 6px; border: 1px dashed #93c5fd; }
 
 /* --- BADGES & TABLES --- */
-.badge { display: inline-block; padding: 6px 14px; border-radius: 6px; font-size: 14px; font-weight: 800; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+.badge { display: inline-block; padding: 6px 16px; border-radius: 6px; font-size: 14px; font-weight: 800; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
 .badge-blue { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
 .badge-green { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
 .badge-purple { background: #f3e8ff; color: #6b21b8; border: 1px solid #e9d5ff; }
@@ -146,10 +147,12 @@ th { font-weight: 700; color: #0f172a; background: #e2e8f0; }
 tr:last-child td { border-bottom: none; }
 tr:nth-child(even) { background-color: #f8fafc; }
 
+.tip { background: #e0f2fe; border-left: 4px solid #0284c7; padding: 16px; border-radius: 0 8px 8px 0; margin: 16px 0; color: #075985; font-weight: 500; }
+
 @media(max-width: 900px) {
   .grid2, .grid3 { grid-template-columns: 1fr; }
   .card { padding: 2rem 1.5rem; }
-  .header h1 { font-size: 28px; }
+  .header h1 { font-size: 30px; }
 }
 </style>
 </head>
@@ -157,12 +160,12 @@ tr:nth-child(even) { background-color: #f8fafc; }
 
 <div class="header">
   <h1>FIC 102 Engineering Physics</h1>
-  <p>Comprehensive Master Notes | Complete Derivations | Units I – V</p>
+  <p>Ultimate Master Notes | Exhaustive Theory, Derivations & Numericals</p>
 </div>
 
 <div class="nav">
   <button class="tab active" onclick="show('unit1',this)">Unit I: Mechanics</button>
-  <button class="tab" onclick="show('unit2',this)">Unit II: Optics</button>
+  <button class="tab" onclick="show('unit2',this)">Unit II: Optics & Waves</button>
   <button class="tab" onclick="show('unit3',this)">Unit III: Modern Physics</button>
   <button class="tab" onclick="show('unit4',this)">Unit IV: Electrostatics</button>
   <button class="tab" onclick="show('unit5',this)">Unit V: Magnetostatics</button>
@@ -203,11 +206,23 @@ tr:nth-child(even) { background-color: #f8fafc; }
       <div class="numerical-title">📝 Numerical: Orthogonal Vectors</div>
       <div class="num-given"><strong>Problem:</strong> Given vectors <b>A</b> = 2<b>i&circ;</b> - 3<b>j&circ;</b> + 7<b>k&circ;</b> and <b>B</b> = 5<b>i&circ;</b> + 1<b>j&circ;</b> + X<b>k&circ;</b>. Find X if vectors A and B are orthogonal.</div>
       <div class="num-solve">
-        <strong>Step-by-Step Solution:</strong><br>
+        <strong>Solution:</strong><br>
         1. Condition for orthogonality: <b>A</b> &middot; <b>B</b> = 0<br>
         2. Apply dot product: (2)(5) + (-3)(1) + (7)(X) = 0<br>
         3. Simplify: 10 - 3 + 7X = 0<br>
         4. Solve for X: 7 + 7X = 0 &rArr; 7X = -7 &rArr; <strong>X = -1</strong>
+      </div>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Finding Components</div>
+      <div class="num-given"><strong>Problem:</strong> A plane is 100 km from the airport in a direction 30&deg; South of East. If +x is East and +y is North, find its position vector.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Magnitude r = 100 km. East is +x, South is -y.<br>
+        x = r cos(30&deg;) = 100 &times; &radic;3 / 2 = 86.6 km<br>
+        y = -r sin(30&deg;) = -100 &times; 0.5 = -50 km<br>
+        <strong>Position vector <b>r</b> = 86.6<b>i&circ;</b> - 50<b>j&circ;</b> km</strong>
       </div>
     </div>
   </div>
@@ -226,26 +241,48 @@ tr:nth-child(even) { background-color: #f8fafc; }
       <li><strong>Kinetic Friction (f<sub>k</sub>):</strong> Constant force acting when the object is actively sliding: <strong>f<sub>k</sub> = &mu;<sub>k</sub>N</strong> (Note: &mu;<sub>k</sub> &lt; &mu;<sub>s</sub>)</li>
     </ul>
 
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Block Pulled at an Angle</div>
+      <div class="num-given"><strong>Problem:</strong> A 10 kg block is pulled by a 20 N force at an angle of 30&deg; to the horizontal. Find the Normal force (N) given g = 10 m/s&sup2;.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Gravity force downward: Mg = 10 &times; 10 = 100 N.<br>
+        Vertical component of applied force: F sin(30&deg;) = 20 &times; 0.5 = 10 N (upwards).<br>
+        Applying Newton's 2nd Law in Y-direction (&Sigma;F<sub>y</sub> = 0):<br>
+        N + 10 - 100 = 0 &rArr; <strong>N = 90 N</strong>
+      </div>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Pulley System</div>
+      <div class="num-given"><strong>Problem:</strong> Find the acceleration of an ideal pulley system with masses M and m (where M > m).</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        For mass M (moving down): Mg - T = Ma<br>
+        For mass m (moving up): T - mg = ma<br>
+        Adding equations: Mg - mg = Ma + ma &rArr; <strong>a = g(M - m) / (M + m)</strong>
+      </div>
+    </div>
+
     <div class="derivation-box">
-      <div class="derivation-title">⚙️ Derivation: Acceleration of a Block on a Rough Inclined Plane</div>
+      <div class="derivation-title">⚙️ Derivation: Acceleration on a Rough Inclined Plane</div>
       <p>Consider a block of mass 'm' sliding down a rough inclined plane making an angle &theta; with the horizontal. Coefficient of kinetic friction is &mu;<sub>k</sub>.</p>
-      <div class="derivation-step"><strong>Step 1: Resolve gravitational force (mg)</strong><br>
+      <div class="derivation-step"><strong>Step 1: Resolve gravitational force (mg)</strong>
       Downward along the incline: F<sub>parallel</sub> = mg sin(&theta;)<br>
       Perpendicular into the incline: F<sub>perpendicular</sub> = mg cos(&theta;)</div>
-      <div class="derivation-step"><strong>Step 2: Determine Normal Force (N)</strong><br>
+      <div class="derivation-step"><strong>Step 2: Determine Normal Force (N)</strong>
       Since there is no vertical bouncing off the plane, N balances the perpendicular component:<br>
       N = mg cos(&theta;)</div>
-      <div class="derivation-step"><strong>Step 3: Define Kinetic Friction (f<sub>k</sub>)</strong><br>
+      <div class="derivation-step"><strong>Step 3: Define Kinetic Friction (f<sub>k</sub>)</strong>
       Friction acts <em>up</em> the incline to oppose the downward sliding motion:<br>
       f<sub>k</sub> = &mu;<sub>k</sub>N = &mu;<sub>k</sub>(mg cos&theta;)</div>
-      <div class="derivation-step"><strong>Step 4: Apply Newton's Second Law along the plane</strong><br>
+      <div class="derivation-step"><strong>Step 4: Apply Newton's Second Law along the plane</strong>
       &Sigma;F = ma<br>
       (Force pulling down) - (Friction pulling up) = ma<br>
       mg sin(&theta;) - &mu;<sub>k</sub>mg cos(&theta;) = ma</div>
-      <div class="derivation-step"><strong>Step 5: Final Acceleration Formula</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       Cancel 'm' from all terms:<br>
       <strong>a = g [ sin(&theta;) - &mu;<sub>k</sub>cos(&theta;) ]</strong></div>
-      <p><em>*Concept - Angle of Repose (&theta;<sub>c</sub>):</em> The maximum angle before sliding starts. Here, a = 0, so mg sin(&theta;<sub>c</sub>) = &mu;<sub>s</sub>mg cos(&theta;<sub>c</sub>). Therefore, <strong>tan(&theta;<sub>c</sub>) = &mu;<sub>s</sub></strong>.</p>
     </div>
   </div>
 
@@ -254,11 +291,37 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <h2>Conservation Laws and Theorems</h2>
     
     <h3>Linear Momentum & Impulse</h3>
-    <p>Linear momentum (<b>P</b>) is defined as <b>P</b> = m<b>v</b>. By Newton's second law, <b>F</b> = d<b>P</b>/dt. If the net external force is zero, momentum is conserved (<b>P</b><sub>initial</sub> = <b>P</b><sub>final</sub>).</p>
+    <p>Linear momentum (<b>P</b>) is defined as <b>P</b> = m<b>v</b>. If the net external force is zero, momentum is conserved (<b>P</b><sub>initial</sub> = <b>P</b><sub>final</sub>).</p>
     <p><strong>Impulse (<b>I</b>):</strong> The total effect of a large force acting over a short time (like a bat hitting a ball). It is the area under the Force-Time curve.</p>
     <div class="formula-box">
       <b>I</b> = &int; <b>F</b> dt = F<sub>avg</sub> &times; &Delta;t<br>
       <strong>Impulse-Momentum Theorem:</strong> <b>I</b> = &Delta;<b>P</b> = <b>P</b><sub>final</sub> - <b>P</b><sub>initial</sub>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Impulse on a Football Player</div>
+      <div class="num-given"><strong>Problem:</strong> A 70 kg player running at 36 km/hr (10 m/s) is hit and bounces back at 18 km/hr (5 m/s). Contact time is 0.05s. Find Impulse and Average Force.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Velocities: v<sub>i</sub> = -10 m/s (initial direction), v<sub>f</sub> = 5 m/s (bounce back direction).<br>
+        Impulse = m(v<sub>f</sub> - v<sub>i</sub>) = 70 &times; [5 - (-10)] = 70 &times; 15 = <strong>1050 N&middot;s</strong><br>
+        Average Force = I / &Delta;t = 1050 / 0.05 = <strong>21,000 N</strong>
+      </div>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: 1D Collision & Recoil</div>
+      <div class="num-given"><strong>Problem 1:</strong> Car A (1000 kg, 5 m/s) rear-ends Car B (2000 kg, 2 m/s). After collision, Car A moves at 3 m/s. Find Car B's final speed.<br>
+      <strong>Problem 2:</strong> A 15-g (0.015 kg) bullet is fired from a 5 kg rifle at a muzzle velocity of 600 m/s. Find the recoil velocity of the rifle.</div>
+      <div class="num-solve">
+        <strong>Solution 1:</strong><br>
+        m<sub>1</sub>v<sub>1i</sub> + m<sub>2</sub>v<sub>2i</sub> = m<sub>1</sub>v<sub>1f</sub> + m<sub>2</sub>v<sub>2f</sub><br>
+        (1000)(5) + (2000)(2) = (1000)(3) + 2000(v<sub>2f</sub>)<br>
+        5000 + 4000 = 3000 + 2000v<sub>2f</sub> &rArr; 6000 = 2000v<sub>2f</sub> &rArr; <strong>v<sub>2f</sub> = 3 m/s</strong><br><br>
+        <strong>Solution 2:</strong><br>
+        Initial momentum = 0. Therefore: 0 = Mv<sub>rifle</sub> + mv<sub>bullet</sub><br>
+        0 = 5(v<sub>rifle</sub>) + 0.015(600) &rArr; 5(v<sub>rifle</sub>) = -9 &rArr; <strong>v<sub>rifle</sub> = -1.8 m/s</strong>
+      </div>
     </div>
 
     <h3>Work & The Work-Energy Theorem</h3>
@@ -267,24 +330,48 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation: The Work-Energy Theorem</div>
       <p>Statement: The net work done by all forces on an object equals the change in its kinetic energy.</p>
-      <div class="derivation-step"><strong>Step 1: Start with the definition of Work</strong><br>
+      <div class="derivation-step"><strong>Step 1: Start with the definition of Work in 1D</strong>
       W = &int; F dx</div>
-      <div class="derivation-step"><strong>Step 2: Apply Newton's Second Law</strong><br>
+      <div class="derivation-step"><strong>Step 2: Apply Newton's Second Law</strong>
       F = ma = m(dv/dt)</div>
-      <div class="derivation-step"><strong>Step 3: Chain Rule for Acceleration</strong><br>
+      <div class="derivation-step"><strong>Step 3: Chain Rule for Acceleration</strong>
       a = (dv/dx) &times; (dx/dt) = v(dv/dx)<br>
       Therefore, F = m [ v(dv/dx) ]</div>
-      <div class="derivation-step"><strong>Step 4: Substitute into the Work integral</strong><br>
+      <div class="derivation-step"><strong>Step 4: Substitute into the Work integral</strong>
       W = &int; [m v (dv/dx)] dx = &int; m v dv</div>
-      <div class="derivation-step"><strong>Step 5: Integrate from initial velocity (u) to final velocity (v)</strong><br>
+      <div class="derivation-step"><strong>Step 5: Integrate from initial velocity (u) to final velocity (v)</strong>
       W = m [ v&sup2; / 2 ] evaluated from u to v<br>
       W = &frac12;mv&sup2; - &frac12;mu&sup2;</div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       <strong>W<sub>net</sub> = KE<sub>final</sub> - KE<sub>initial</sub> = &Delta;KE</strong></div>
     </div>
 
     <div class="numerical-box">
-      <div class="numerical-title">📝 Numerical: The Ballistic Pendulum</div>
+      <div class="numerical-title">📝 Numerical: Work-Energy on a Rough Surface</div>
+      <div class="num-given"><strong>Problem:</strong> A 1 kg block at rest is pulled by a 34 N horizontal force over 1 m. The friction coefficient &mu;<sub>k</sub> is 0.2. Find its final speed (g=10).</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Friction force f<sub>k</sub> = &mu;<sub>k</sub>mg = 0.2 &times; 1 &times; 10 = 2 N.<br>
+        Net force = 34 N - 2 N = 32 N.<br>
+        Work done by net force W = 32 N &times; 1 m = 32 J.<br>
+        Work-Energy theorem: W = &Delta;KE &rArr; 32 = &frac12;(1)v&sup2; &rArr; v&sup2; = 64 &rArr; <strong>v = 8 m/s</strong>
+      </div>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Energy Conservation on Incline</div>
+      <div class="num-given"><strong>Problem:</strong> A 5 kg block (at rest) is released from a height of 20 m on a frictionless incline. Calculate the height (x) at which the kinetic energy is 3 times the potential energy.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Total initial mechanical energy at top = mg(20).<br>
+        At height x: PE = mgx and KE = 3(mgx).<br>
+        Total energy at x = mgx + 3mgx = 4mgx.<br>
+        Conservation of energy: 4mgx = mg(20) &rArr; 4x = 20 &rArr; <strong>x = 5 m</strong>
+      </div>
+    </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical / Derivation: The Ballistic Pendulum</div>
       <div class="num-given"><strong>Problem:</strong> A bullet of mass m<sub>1</sub> and velocity v<sub>A</sub> is fired into a large wooden block of mass m<sub>2</sub> suspended by strings. The bullet embeds in the block, and the entire system swings up to a maximum height h. Derive the formula to find the initial speed of the bullet v<sub>A</sub>.</div>
       <div class="num-solve">
         <strong>Methodology (Two-Part Physics Problem):</strong><br>
@@ -309,77 +396,156 @@ tr:nth-child(even) { background-color: #f8fafc; }
 </div>
 
 <div id="unit2" class="section">
-  
+
   <div class="card">
     <span class="badge badge-green">1. Wave Fundamentals</span>
-    <h2>Wave Types and The EM Spectrum</h2>
-    <p><strong>Mechanical vs Electromagnetic:</strong> Mechanical waves require a physical medium to propagate (like sound). Electromagnetic (EM) waves consist of oscillating electric and magnetic fields and can travel through a vacuum at the speed of light (c = 3 &times; 10&sup8; m/s).</p>
+    <h2>Traveling Waves & Equations</h2>
+    <p>A traveling wave is a disturbance that carries energy from one place to another without transferring matter. Mathematically, a 1D transverse harmonic wave traveling in the +x direction is described by:</p>
     
-    <div class="grid2">
-      <div class="mini-card">
-        <h3>Transverse Waves</h3>
-        <p>The particles of the medium oscillate <strong>perpendicular</strong> to the direction of wave propagation. Contains crests and troughs.</p>
-        <p><em>Examples:</em> Light waves, EM waves, ripples on water.</p>
-      </div>
-      <div class="mini-card">
-        <h3>Longitudinal Waves</h3>
-        <p>The particles of the medium oscillate <strong>parallel</strong> to the direction of wave propagation. Contains compressions and rarefactions.</p>
-        <p><em>Examples:</em> Sound waves, spring oscillations.</p>
-      </div>
-    </div>
-
-    <h3>The Electromagnetic Spectrum</h3>
-    <p>Ordered by <strong>increasing wavelength</strong> (and therefore decreasing frequency and decreasing energy):</p>
     <div class="formula-box">
-      Gamma Rays &rarr; X-Rays &rarr; Ultraviolet (UV) &rarr; Visible Light (400nm - 750nm) &rarr; Infrared (IR) &rarr; Microwaves &rarr; Radio Waves
+      <strong>Wave Equation:</strong> y(x,t) = y<sub>m</sub> sin(kx - &omega;t + &phi;)<br>
+      Where:<br>
+      &bull; <strong>y<sub>m</sub></strong> = Amplitude (maximum displacement)<br>
+      &bull; <strong>k</strong> = Angular wave number = 2&pi; / &lambda;<br>
+      &bull; <strong>&omega;</strong> = Angular frequency = 2&pi;f = 2&pi; / T<br>
+      &bull; <strong>&phi;</strong> = Initial phase angle<br>
+      <strong>Wave Speed (v):</strong> v = &lambda;f = &omega; / k
+    </div>
+    <div class="tip">Note: If the wave travels in the -x direction, the equation uses a plus sign: y(x,t) = y<sub>m</sub> sin(kx + &omega;t + &phi;).</div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Traveling Wave Equation</div>
+      <div class="num-given"><strong>Problem:</strong> A transverse wave on a string is given by y(x,t) = 0.05 sin(40&pi;x - 200&pi;t). Where x and y are in meters and t in seconds. Find the amplitude, wavelength, frequency, and wave speed.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Compare with standard form: y(x,t) = y<sub>m</sub> sin(kx - &omega;t)<br>
+        1. Amplitude (y<sub>m</sub>) = <strong>0.05 m</strong><br>
+        2. k = 40&pi; &rArr; 2&pi;/&lambda; = 40&pi; &rArr; &lambda; = 2/40 = <strong>0.05 m</strong><br>
+        3. &omega; = 200&pi; &rArr; 2&pi;f = 200&pi; &rArr; f = <strong>100 Hz</strong><br>
+        4. Speed (v) = &omega; / k = 200&pi; / 40&pi; = <strong>5 m/s</strong>
+      </div>
     </div>
   </div>
 
   <div class="card">
-    <span class="badge badge-green">2. Interference</span>
+    <span class="badge badge-green">2. Superposition of Waves</span>
+    <h2>The Principle of Superposition</h2>
+    <p>When two or more waves travel through the same medium simultaneously, the net displacement of the medium at any point is the algebraic sum of the individual displacements. <strong>y<sub>net</sub> = y<sub>1</sub> + y<sub>2</sub> + ... + y<sub>n</sub></strong></p>
+
+    <h3>Interference</h3>
+    <p>Interference is a direct result of superposition. When two waves of the same frequency and constant phase difference overlap:</p>
+    <ul>
+      <li><strong>Constructive Interference:</strong> Waves arrive in-phase (crests align with crests). Resultant amplitude is maximized. <br>Path Difference: &Delta;x = n&lambda; (where n = 0, 1, 2...)</li>
+      <li><strong>Destructive Interference:</strong> Waves arrive completely out-of-phase (crests align with troughs). Resultant amplitude is minimized.<br>Path Difference: &Delta;x = (n + &frac12;)&lambda;</li>
+    </ul>
+
+    <div class="formula-box">
+      <strong>Phase Difference (&Delta;&phi;) vs Path Difference (&Delta;x):</strong><br>
+      &Delta;&phi; = ( 2&pi; / &lambda; ) &times; &Delta;x
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="badge badge-green">3. The Electromagnetic Spectrum</span>
+    <h2>EM Spectrum & Properties</h2>
+    <p>Electromagnetic waves are transverse waves consisting of oscillating electric and magnetic fields. They travel at the speed of light (c = 3 &times; 10&sup8; m/s) in a vacuum. The spectrum is ordered below by <strong>Increasing Wavelength</strong> (Decreasing Frequency, Decreasing Energy).</p>
+
+    <table>
+      <tr>
+        <th>Region</th>
+        <th>Wavelength Range</th>
+        <th>Key Characteristics / Uses</th>
+      </tr>
+      <tr>
+        <td><strong>Gamma Rays (&gamma;)</strong></td>
+        <td>&lt; 0.01 nm</td>
+        <td>Highest energy. Emitted by radioactive decay. Used in cancer treatment.</td>
+      </tr>
+      <tr>
+        <td><strong>X-Rays</strong></td>
+        <td>0.01 nm - 10 nm</td>
+        <td>High energy. Used for medical imaging and crystallography.</td>
+      </tr>
+      <tr>
+        <td><strong>Ultraviolet (UV)</strong></td>
+        <td>10 nm - 400 nm</td>
+        <td>Can cause sunburn. Used for sterilization and fluorescent lights.</td>
+      </tr>
+      <tr>
+        <td><strong>Visible Light</strong></td>
+        <td>400 nm - 700 nm</td>
+        <td>The only part humans can see. Violet (400nm) to Red (700nm).</td>
+      </tr>
+      <tr>
+        <td><strong>Infrared (IR)</strong></td>
+        <td>700 nm - 1 mm</td>
+        <td>Heat radiation. Used in night vision, thermal imaging, remote controls.</td>
+      </tr>
+      <tr>
+        <td><strong>Microwaves</strong></td>
+        <td>1 mm - 1 m</td>
+        <td>Used in radar, satellite communication, and microwave ovens.</td>
+      </tr>
+      <tr>
+        <td><strong>Radio Waves</strong></td>
+        <td>&gt; 1 m</td>
+        <td>Lowest energy, longest wavelength. Used for TV, AM/FM radio broadcasting.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <span class="badge badge-green">4. Wave Optics</span>
     <h2>Young's Double Slit Experiment (YDSE)</h2>
     <p>Interference is the phenomenon where two waves superimpose to form a resultant wave of greater, lower, or the same amplitude. <strong>Strict Conditions:</strong> The two sources must be <strong>coherent</strong> (maintaining a constant phase difference) and <strong>monochromatic</strong> (single wavelength).</p>
 
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation: Path Difference in YDSE</div>
       <p>Consider two slits S<sub>1</sub> and S<sub>2</sub> separated by distance 'd'. A screen is placed at distance 'L' (where L >> d). A point P on the screen is at distance 'y' from the central axis.</p>
-      <div class="derivation-step"><strong>Step 1: Geometric Path Difference (&delta;)</strong><br>
+      <div class="derivation-step"><strong>Step 1: Geometric Path Difference (&delta;)</strong>
       The wave from S<sub>2</sub> travels further than S<sub>1</sub> to reach P. If we drop a perpendicular from S<sub>1</sub> to S<sub>2</sub>P, the extra distance is &delta; = S<sub>2</sub>P - S<sub>1</sub>P.</div>
-      <div class="derivation-step"><strong>Step 2: Small Angle Approximation</strong><br>
+      <div class="derivation-step"><strong>Step 2: Small Angle Approximation</strong>
       Because L is very large, the rays are nearly parallel. The angle &theta; made by the point P from the center of the slits gives:<br>
       <strong>&delta; &approx; d sin(&theta;)</strong></div>
-      <div class="derivation-step"><strong>Step 3: Relate to Screen Position (y)</strong><br>
+      <div class="derivation-step"><strong>Step 3: Relate to Screen Position (y)</strong>
       For small angles, sin(&theta;) &approx; tan(&theta;) = y / L.<br>
       Therefore, <strong>Path Difference &delta; = (y &middot; d) / L</strong></div>
     </div>
 
     <h3>Conditions for Fringes</h3>
-    <table style="margin-top: 10px;">
-      <tr>
-        <th>Type of Fringe</th>
-        <th>Path Difference Condition</th>
-        <th>Position on Screen (y)</th>
-      </tr>
-      <tr>
-        <td><strong>Constructive (Bright)</strong></td>
-        <td>&delta; = m&lambda;  (where m = 0, &plusmn;1, &plusmn;2...)</td>
-        <td>y = (m &middot; &lambda; &middot; L) / d</td>
-      </tr>
-      <tr>
-        <td><strong>Destructive (Dark)</strong></td>
-        <td>&delta; = (m + &frac12;)&lambda;</td>
-        <td>y = (m + &frac12;) &middot; &lambda; &middot; L / d</td>
-      </tr>
-    </table>
-    
+    <div class="grid2">
+      <div class="mini-card">
+        <h3>YDSE (Interference) Bright Fringes</h3>
+        <p><strong>Constructive Condition:</strong> &delta; = m&lambda; (where m = 0, &plusmn;1, &plusmn;2...)</p>
+        <p><strong>Position:</strong> y<sub>bright</sub> = (m&lambda;L) / d</p>
+      </div>
+      <div class="mini-card">
+        <h3>YDSE (Interference) Dark Fringes</h3>
+        <p><strong>Destructive Condition:</strong> &delta; = (m + &frac12;)&lambda;</p>
+        <p><strong>Position:</strong> y<sub>dark</sub> = (m + &frac12;)&lambda;L / d</p>
+      </div>
+    </div>
     <div class="formula-box">
       <strong>Fringe Width (&beta;):</strong> The distance between any two consecutive bright or dark fringes.<br>
       <strong>&beta; = &lambda;L / d</strong>
     </div>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: YDSE Calculation</div>
+      <div class="num-given"><strong>Problem:</strong> In a YDSE, the screen is placed 1.5m away. The slits are 0.05 mm apart. If the third bright fringe is 4.5 cm from the center, calculate the wavelength of light.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        y = (m&lambda;L) / d<br>
+        Convert units: y = 0.045 m, L = 1.5 m, d = 5 &times; 10&supmin;&sup5; m, m = 3.<br>
+        &lambda; = (y &middot; d) / (m &middot; L)<br>
+        &lambda; = (0.045 &times; 5 &times; 10&supmin;&sup5;) / (3 &times; 1.5)<br>
+        &lambda; = 2.25 &times; 10&supmin;&sup6; / 4.5 = 5 &times; 10&supmin;&sup7; m = <strong>500 nm</strong>
+      </div>
+    </div>
   </div>
 
   <div class="card">
-    <span class="badge badge-green">3. Diffraction</span>
+    <span class="badge badge-green">5. Diffraction</span>
     <h2>Fraunhofer Single Slit Diffraction</h2>
     <p>Diffraction is the bending of light around the corners of an obstacle. Unlike interference (two distinct sources), diffraction in a single slit occurs due to the interference of secondary wavelets originating from different parts of the <em>same</em> wavefront.</p>
 
@@ -401,97 +567,140 @@ tr:nth-child(even) { background-color: #f8fafc; }
       <strong>Width of Central Maximum:</strong> W = 2&lambda;L / a
     </div>
     <p><em>Note:</em> The central fringe (m=0) is the brightest and widest. Its width is exactly double the width of all the secondary maxima.</p>
+    
+    <table>
+      <tr><th>Feature</th><th>Interference (YDSE)</th><th>Diffraction (Single Slit)</th></tr>
+      <tr><td>Fringe Width</td><td>All fringes have exactly equal width.</td><td>Central maximum is double the width of secondary fringes.</td></tr>
+      <tr><td>Intensity</td><td>All bright fringes are equally intense.</td><td>Intensity falls rapidly from the center outwards.</td></tr>
+    </table>
+
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Single Slit Central Maximum</div>
+      <div class="num-given"><strong>Problem:</strong> Light of wavelength 500 nm falls on a single slit of width 0.1 mm. The screen is 2m away. What is the width of the central maximum?</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        Formula: Width = 2&lambda;L / a<br>
+        Given: &lambda; = 500 &times; 10&supmin;&sup9; m, L = 2m, a = 1 &times; 10&supmin;&sup4; m.<br>
+        Width = (2 &times; 500&times;10&supmin;&sup9; &times; 2) / (1&times;10&supmin;&sup4;)<br>
+        Width = (2000&times;10&supmin;&sup9;) / (1&times;10&supmin;&sup4;) = 2000&times;10&supmin;&sup5; = 0.02 m = <strong>2 cm</strong>
+      </div>
+    </div>
   </div>
 </div>
 
 <div id="unit3" class="section">
   
   <div class="card">
-    <span class="badge badge-purple">1. The Photoelectric Effect</span>
-    <h2>Failures of Classical Wave Theory</h2>
-    <p>When light hits a metal surface, electrons can be ejected. The classical wave theory of light completely failed to explain the experimental observations of this effect:</p>
-    <ul>
-      <li><strong>Classical Prediction:</strong> Higher intensity light means waves with more energy, which should give ejected electrons more kinetic energy.<br>
-      <strong>Reality:</strong> Maximum Kinetic Energy is completely independent of light intensity. Intensity only changes the <em>number</em> of electrons ejected (the current).</li>
-      <li><strong>Classical Prediction:</strong> Any frequency of light should eventually eject electrons if you shine it long enough for energy to build up.<br>
-      <strong>Reality:</strong> Emission is instantaneous (< 10&supmin;&sup9; s). Furthermore, there is a strict <strong>Threshold Frequency (&nu;<sub>0</sub>)</strong>. Below this frequency, no electrons are ejected, no matter how bright the light is or how long it shines.</li>
-      <li><strong>Classical Prediction:</strong> Frequency shouldn't affect electron kinetic energy.<br>
-      <strong>Reality:</strong> Maximum Kinetic Energy increases linearly with the frequency of incident light.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <span class="badge badge-purple">2. Einstein's Quantum Theory</span>
-    <h2>Photons and the Photoelectric Equation</h2>
-    <p>Albert Einstein solved the problem in 1905 (winning the Nobel Prize) by proposing that light behaves as a stream of quantized particles called <strong>photons</strong>. One photon interacts with exactly one electron.</p>
-
-    <div class="formula-box">
-      <strong>Energy of a single photon:</strong> E = h&nu; = hc / &lambda;<br>
-      <em>The Ultimate Exam Shortcut:</em> <strong>E(eV) = 1240 / &lambda;(nm)</strong>
-    </div>
-
-    <h3>The Work Function (&Phi;)</h3>
-    <p>The absolute minimum energy required to break an electron free from the metal's surface.<br>
-    <strong>&Phi; = h&nu;<sub>0</sub> = hc / &lambda;<sub>0</sub></strong></p>
-
-    <h3>Einstein's Photoelectric Equation</h3>
-    <p>The energy of the incoming photon goes into freeing the electron (&Phi;), and whatever energy is left over becomes the electron's kinetic energy.</p>
-    <div class="formula-box">
-      <strong>KE<sub>max</sub> = E<sub>photon</sub> - &Phi;</strong><br>
-      <strong>KE<sub>max</sub> = h&nu; - h&nu;<sub>0</sub></strong>
-    </div>
-
-    <h3>Stopping Potential (V<sub>0</sub>)</h3>
-    <p>The negative voltage required to repel and stop even the fastest moving photoelectrons from reaching the anode. It directly measures KE<sub>max</sub>.</p>
-    <div class="formula-box">
-      <strong>KE<sub>max</sub> = e &middot; V<sub>0</sub></strong><br>
-      Therefore, V<sub>0</sub> = (h/e)&nu; - (&Phi;/e)
-    </div>
-  </div>
-
-  <div class="card">
-    <span class="badge badge-purple">3. Graphical Analysis</span>
-    <h2>Stopping Potential vs Frequency Graph</h2>
-    <p>If you plot Stopping Potential (V<sub>0</sub>) on the Y-axis and Frequency (&nu;) on the X-axis, the equation V<sub>0</sub> = (h/e)&nu; - (&Phi;/e) represents a straight line (y = mx + c).</p>
+    <span class="badge badge-purple">1. Historical Context</span>
+    <h2>The Timeline of Quantum Mechanics</h2>
+    <p>Modern physics emerged from the failures of classical physics to explain atomic and subatomic phenomena at the turn of the 20th century.</p>
     
-    <table style="margin-top: 15px;">
+    <table>
       <tr>
-        <th>Graph Feature</th>
-        <th>Physical Meaning</th>
-        <th>Significance</th>
+        <th>Year</th>
+        <th>Physicist</th>
+        <th>Groundbreaking Contribution</th>
       </tr>
       <tr>
-        <td><strong>Slope (m)</strong></td>
-        <td>h / e</td>
-        <td>The slope is constant for ALL metals. You can calculate Planck's constant by multiplying the slope by the charge of an electron (e).</td>
+        <td><strong>1900</strong></td>
+        <td>Max Planck</td>
+        <td>Proposed that energy is quantized in discrete packets (E = nhf) to solve the Blackbody Radiation problem. Birth of Quantum Theory.</td>
       </tr>
       <tr>
-        <td><strong>X-intercept</strong></td>
-        <td>&nu;<sub>0</sub></td>
-        <td>The threshold frequency of that specific metal.</td>
+        <td><strong>1905</strong></td>
+        <td>Albert Einstein</td>
+        <td>Applied quantization to light itself, proposing "photons" to successfully explain the Photoelectric Effect.</td>
       </tr>
       <tr>
-        <td><strong>Y-intercept</strong></td>
-        <td>-&Phi; / e</td>
-        <td>Related to the work function of the metal.</td>
+        <td><strong>1913</strong></td>
+        <td>Niels Bohr</td>
+        <td>Developed the Bohr Model of the atom, showing electrons orbit in discrete, quantized energy levels.</td>
+      </tr>
+      <tr>
+        <td><strong>1924</strong></td>
+        <td>Louis de Broglie</td>
+        <td>Proposed Wave-Particle Duality for matter (&lambda; = h/p), suggesting electrons have wave-like properties.</td>
+      </tr>
+      <tr>
+        <td><strong>1925-26</strong></td>
+        <td>Heisenberg &amp; Schr&ouml;dinger</td>
+        <td>Formulated the complete mathematical framework of Quantum Mechanics (Matrix Mechanics and the Wave Equation).</td>
       </tr>
     </table>
+  </div>
+
+  <div class="card">
+    <span class="badge badge-purple">2. The Photoelectric Effect</span>
+    <h2>Detailed Theory & Graphical Analysis</h2>
+    <p>The photoelectric effect is the emission of electrons from a metal surface when illuminated by light of a sufficiently high frequency. Classical wave theory failed to explain this because:</p>
+    <ol>
+      <li><strong>Independence of Intensity:</strong> Classical theory predicted higher intensity light would increase electron Kinetic Energy. Experiment showed KE is independent of intensity.</li>
+      <li><strong>Threshold Frequency:</strong> Classical theory predicted any frequency would work eventually. Experiment showed a strict cutoff frequency (&nu;<sub>0</sub>) below which NO emission occurs.</li>
+      <li><strong>Instantaneous Emission:</strong> Classical theory predicted a time delay for energy buildup at low intensities. Experiment showed emission is instantaneous (&lt; 10&supmin;&sup9; s).</li>
+    </ol>
+
+    <div class="formula-box">
+      <strong>Einstein's Photoelectric Equation:</strong><br>
+      E<sub>photon</sub> = &Phi; + KE<sub>max</sub><br>
+      h&nu; = h&nu;<sub>0</sub> + KE<sub>max</sub><br>
+      <br>
+      <strong>Ultimate Shortcut Formula:</strong><br>
+      E(eV) = 1240 / &lambda;(nm)
+    </div>
+
+    <h3>Key Graphs in the Photoelectric Effect</h3>
+    <div class="grid3">
+      <div class="mini-card">
+        <h4>1. Current vs Intensity</h4>
+        <p>If frequency is constant, the photoelectric current is <strong>directly proportional</strong> to the intensity of light. More intensity = more photons = more ejected electrons.</p>
+      </div>
+      <div class="mini-card">
+        <h4>2. Current vs Voltage</h4>
+        <p>At a specific frequency and intensity, as retarding voltage increases, current drops to zero at the <strong>Stopping Potential (V<sub>0</sub>)</strong>. Different intensities yield the same V<sub>0</sub>.</p>
+      </div>
+      <div class="mini-card">
+        <h4>3. V<sub>0</sub> vs Frequency (&nu;)</h4>
+        <p>A straight line plot. <br><strong>Equation:</strong> V<sub>0</sub> = (h/e)&nu; - (&Phi;/e).<br><strong>Slope:</strong> h/e (constant for all metals).<br><strong>X-Intercept:</strong> Threshold frequency &nu;<sub>0</sub>.</p>
+      </div>
+    </div>
+    
+    <h3>Common Work Functions (Memorise)</h3>
+    <table>
+      <tr><th>Metal</th><th>&Phi; (eV)</th><th>&lambda;<sub>0</sub> (nm)</th><th>Region</th></tr>
+      <tr><td>Cesium (Cs)</td><td>1.9</td><td>653</td><td>Red/Visible</td></tr>
+      <tr><td>Potassium (K)</td><td>2.2</td><td>564</td><td>Green</td></tr>
+      <tr><td>Sodium (Na)</td><td>2.3</td><td>540</td><td>Green</td></tr>
+      <tr><td>Lithium (Li)</td><td>2.5</td><td>496</td><td>Blue-green</td></tr>
+      <tr><td>Calcium (Ca)</td><td>3.2</td><td>388</td><td>UV edge</td></tr>
+      <tr><td>Copper (Cu)</td><td>4.7</td><td>264</td><td>UV</td></tr>
+      <tr><td>Platinum (Pt)</td><td>6.4</td><td>194</td><td>Deep UV</td></tr>
+    </table>
+    <div class="tip">Pattern: Lower &Phi; = easier emission = longer threshold &lambda;<sub>0</sub>. Cesium (Cs) is highly sensitive and easily activated by visible light.</div>
 
     <div class="numerical-box">
-      <div class="numerical-title">📝 Numerical: Comprehensive Photoelectric Calculation</div>
-      <div class="num-given"><strong>Problem:</strong> A Sodium (Na) surface with a work function of &Phi; = 2.46 eV is illuminated with ultraviolet light of wavelength 300 nm. Find: (a) Photon Energy, (b) Max Kinetic Energy of electrons, (c) Threshold Wavelength.</div>
+      <div class="numerical-title">📝 Numerical: Photoelectric Emission</div>
+      <div class="num-given"><strong>Problem:</strong> Light of wavelength 200 nm falls on an aluminum surface (work function &Phi; = 4.2 eV). Calculate the kinetic energy of the fastest emitted electrons and the stopping potential.</div>
       <div class="num-solve">
-        <strong>Step-by-Step Solution:</strong><br>
-        <strong>(a) Photon Energy (using shortcut)</strong><br>
-        E = 1240 / &lambda;(nm) = 1240 / 300 = <strong>4.133 eV</strong><br><br>
-        
-        <strong>(b) Maximum Kinetic Energy</strong><br>
-        KE<sub>max</sub> = E - &Phi; = 4.133 eV - 2.46 eV = <strong>1.673 eV</strong><br>
-        <em>(Note: Since KE > 0, emission does occur. The stopping potential would be exactly 1.673 Volts).</em><br><br>
+        <strong>Solution:</strong><br>
+        1. Calculate Photon Energy (E) using the shortcut:<br>
+        E = 1240 / &lambda;(nm) = 1240 / 200 = <strong>6.2 eV</strong><br><br>
+        2. Calculate Maximum Kinetic Energy:<br>
+        KE<sub>max</sub> = E - &Phi; = 6.2 eV - 4.2 eV = <strong>2.0 eV</strong><br><br>
+        3. Calculate Stopping Potential (V<sub>0</sub>):<br>
+        Since KE<sub>max</sub> = eV<sub>0</sub>, the stopping potential is simply the KE value in Volts.<br>
+        V<sub>0</sub> = <strong>2.0 Volts</strong>
+      </div>
+    </div>
 
-        <strong>(c) Threshold Wavelength (&lambda;<sub>0</sub>)</strong><br>
-        &lambda;<sub>0</sub> = 1240 / &Phi;(eV) = 1240 / 2.46 = <strong>504 nm</strong><br>
-        <em>(Note: 504nm is green light. Sodium will emit electrons for any light with a wavelength shorter than 504nm, like blue, violet, or UV).</em>
+    <div class="numerical-box">
+      <div class="numerical-title">📝 Numerical: Stopping Potential Shift</div>
+      <div class="num-given"><strong>Problem:</strong> The stopping potential of a surface is 3V at 500nm. Find the stopping potential V<sub>2</sub> at 600nm.</div>
+      <div class="num-solve">
+        <strong>Solution:</strong><br>
+        V = 1240/&lambda; - &Phi;/e<br>
+        V<sub>1</sub> - V<sub>2</sub> = 1240 &times; (1/500 - 1/600) = 1240 &times; (0.002 - 0.00166) = 1240 &times; 0.000333<br>
+        V<sub>1</sub> - V<sub>2</sub> = 0.41 V<br>
+        V<sub>2</sub> = 3 - 0.41 = <strong>2.59 V</strong>
       </div>
     </div>
   </div>
@@ -530,36 +739,36 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation 1: Electric Field of an Infinite Line of Charge</div>
       <p>Consider an infinitely long straight wire with a uniform linear charge density &lambda; (Charge per unit length).</p>
-      <div class="derivation-step"><strong>Step 1: Choose Gaussian Surface</strong><br>
+      <div class="derivation-step"><strong>Step 1: Choose Gaussian Surface</strong>
       By symmetry, the electric field points radially outward. We choose a cylinder of radius 'r' and length 'l' coaxial with the wire.</div>
-      <div class="derivation-step"><strong>Step 2: Calculate Flux (&oint; E &middot; dA)</strong><br>
+      <div class="derivation-step"><strong>Step 2: Calculate Flux (&oint; E &middot; dA)</strong>
       The cylinder has 3 parts: Top flat cap, bottom flat cap, and curved surface.<br>
-      - Top & Bottom caps: The Area vector points vertically, while E points radially outward. Angle is 90&deg;. Since cos(90&deg;)=0, Flux = 0.<br>
+      - Top &amp; Bottom caps: The Area vector points vertically, while E points radially outward. Angle is 90&deg;. Since cos(90&deg;)=0, Flux = 0.<br>
       - Curved surface: E is parallel to dA (Angle = 0&deg;, cos(0)=1). Area of curved surface is 2&pi;rl.<br>
       Total Flux &Phi;<sub>E</sub> = E(2&pi;rl).</div>
-      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Charge</strong><br>
+      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Charge</strong>
       The length of wire enclosed by our cylinder is 'l'.<br>
       Q<sub>encl</sub> = &lambda; &middot; l</div>
-      <div class="derivation-step"><strong>Step 4: Apply Gauss's Law</strong><br>
+      <div class="derivation-step"><strong>Step 4: Apply Gauss's Law</strong>
       E(2&pi;rl) = (&lambda;l) / &epsilon;<sub>0</sub></div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       Cancel 'l' to get: <strong>E = &lambda; / (2&pi;&epsilon;<sub>0</sub>r)</strong></div>
     </div>
 
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation 2: Electric Field of an Infinite Plane Sheet</div>
       <p>Consider an infinite, thin, non-conducting sheet with uniform surface charge density &sigma; (Charge per unit area).</p>
-      <div class="derivation-step"><strong>Step 1: Choose Gaussian Surface</strong><br>
+      <div class="derivation-step"><strong>Step 1: Choose Gaussian Surface</strong>
       We choose a cylindrical "pillbox" piercing through the sheet. Let the cross-sectional area of the flat caps be 'A'.</div>
-      <div class="derivation-step"><strong>Step 2: Calculate Flux</strong><br>
+      <div class="derivation-step"><strong>Step 2: Calculate Flux</strong>
       - Curved surface: E field is perpendicular to the area vector. Flux = 0.<br>
       - Two flat caps: E field points outward, parallel to dA. Flux through one cap = EA. Since there are two caps (front and back), Total Flux &Phi;<sub>E</sub> = 2EA.</div>
-      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Charge</strong><br>
+      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Charge</strong>
       The pillbox cuts a circle of area A out of the sheet. <br>
       Q<sub>encl</sub> = &sigma; &middot; A</div>
-      <div class="derivation-step"><strong>Step 4: Apply Gauss's Law</strong><br>
+      <div class="derivation-step"><strong>Step 4: Apply Gauss's Law</strong>
       2EA = (&sigma;A) / &epsilon;<sub>0</sub></div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       Cancel 'A' to get: <strong>E = &sigma; / (2&epsilon;<sub>0</sub>)</strong><br>
       <em>Note: The electric field is uniform and does not depend on distance 'r'!</em></div>
     </div>
@@ -573,16 +782,16 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation: Capacitance of a Parallel Plate Capacitor</div>
       <p>Consider two parallel conducting plates of Area A, separated by distance d. One plate has charge +Q, the other -Q. Surface charge density &sigma; = Q/A.</p>
-      <div class="derivation-step"><strong>Step 1: Electric Field between plates</strong><br>
+      <div class="derivation-step"><strong>Step 1: Electric Field between plates</strong>
       Between two oppositely charged plates, the fields add up: E = &sigma;/(2&epsilon;<sub>0</sub>) + &sigma;/(2&epsilon;<sub>0</sub>) = &sigma; / &epsilon;<sub>0</sub>.<br>
       Substituting &sigma; = Q/A gives: E = Q / (&epsilon;<sub>0</sub>A).</div>
-      <div class="derivation-step"><strong>Step 2: Potential Difference (V)</strong><br>
+      <div class="derivation-step"><strong>Step 2: Potential Difference (V)</strong>
       Since the field is uniform, Voltage is Field times distance: V = E &middot; d.<br>
       Substituting E: V = (Q &middot; d) / (&epsilon;<sub>0</sub>A).</div>
-      <div class="derivation-step"><strong>Step 3: Calculate Capacitance</strong><br>
+      <div class="derivation-step"><strong>Step 3: Calculate Capacitance</strong>
       C = Q / V<br>
       C = Q / [ (Q &middot; d) / (&epsilon;<sub>0</sub>A) ]</div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       Cancel Q to get: <strong>C = &epsilon;<sub>0</sub>A / d</strong></div>
       <p><em>Energy Stored:</em> <strong>U = &frac12;CV&sup2; = Q&sup2; / (2C)</strong></p>
     </div>
@@ -623,13 +832,13 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation: Radius of a Charged Particle in a Magnetic Field</div>
       <p>If a charged particle enters a uniform magnetic field perpendicular to its velocity (&theta; = 90&deg;), the magnetic force is perpendicular to the velocity, acting as a centripetal force causing uniform circular motion.</p>
-      <div class="derivation-step"><strong>Step 1: Equate Forces</strong><br>
+      <div class="derivation-step"><strong>Step 1: Equate Forces</strong>
       Magnetic Force = Centripetal Force<br>
       qvB sin(90&deg;) = m(v&sup2; / r)</div>
-      <div class="derivation-step"><strong>Step 2: Solve for Radius (r)</strong><br>
+      <div class="derivation-step"><strong>Step 2: Solve for Radius (r)</strong>
       qvB = mv&sup2; / r<br>
       Cancel one 'v': qB = mv / r</div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       <strong>r = mv / (qB)</strong></div>
       <p><em>Observation:</em> Faster or heavier particles have larger radii. Stronger fields or higher charges cause tighter (smaller) radii.</p>
     </div>
@@ -651,17 +860,17 @@ tr:nth-child(even) { background-color: #f8fafc; }
     <div class="derivation-box">
       <div class="derivation-title">⚙️ Derivation 1: Magnetic Field of an Infinite Straight Wire</div>
       <p>Consider an infinitely long straight wire carrying a steady current I. We want to find the magnetic field B at a radial distance 'r'.</p>
-      <div class="derivation-step"><strong>Step 1: Choose Amperian Loop</strong><br>
+      <div class="derivation-step"><strong>Step 1: Choose Amperian Loop</strong>
       By symmetry, the magnetic field lines form concentric circles around the wire (Right-Hand Rule). We choose a circular loop of radius 'r' centered on the wire.</div>
-      <div class="derivation-step"><strong>Step 2: Evaluate the Line Integral</strong><br>
+      <div class="derivation-step"><strong>Step 2: Evaluate the Line Integral</strong>
       At every point on the circular loop, <b>B</b> is tangential, and the path element d<b>l</b> is also tangential. Therefore, angle &theta; = 0&deg;, cos(0) = 1.<br>
       &oint; <b>B</b> &middot; d<b>l</b> = &oint; B dl = B &oint; dl<br>
       The integral of dl around a circle is its circumference (2&pi;r).<br>
       &oint; <b>B</b> &middot; d<b>l</b> = B(2&pi;r)</div>
-      <div class="derivation-step"><strong>Step 3: Apply Ampere's Law</strong><br>
+      <div class="derivation-step"><strong>Step 3: Apply Ampere's Law</strong>
       B(2&pi;r) = &mu;<sub>0</sub> I<sub>enclosed</sub><br>
       Since the loop encloses the entire wire, I<sub>encl</sub> = I.</div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       <strong>B = &mu;<sub>0</sub>I / (2&pi;r)</strong></div>
     </div>
 
@@ -669,20 +878,20 @@ tr:nth-child(even) { background-color: #f8fafc; }
       <div class="derivation-title">⚙️ Derivation 2: Magnetic Field Inside an Ideal Solenoid</div>
       <p>A solenoid is a long coil of wire. For an "ideal" solenoid (infinitely long, tightly packed), the magnetic field is uniform and parallel to the axis inside, and practically zero outside.</p>
       <p>Let the solenoid have 'N' total turns over a length 'L'. Let 'n' be the number of turns per unit length (n = N/L). The current is 'I'.</p>
-      <div class="derivation-step"><strong>Step 1: Choose Amperian Loop</strong><br>
+      <div class="derivation-step"><strong>Step 1: Choose Amperian Loop</strong>
       We choose a rectangular loop (1-2-3-4) of length 'l' and width 'w'. Side 1 is perfectly parallel to the axis <em>inside</em> the solenoid. Side 3 is <em>outside</em> the solenoid. Sides 2 and 4 cut across the coils perpendicular to the field.</div>
-      <div class="derivation-step"><strong>Step 2: Evaluate the Line Integral in four parts</strong><br>
+      <div class="derivation-step"><strong>Step 2: Evaluate the Line Integral in four parts</strong>
       &oint; <b>B</b> &middot; d<b>l</b> = &int;<sub>1</sub> <b>B</b>&middot;d<b>l</b> + &int;<sub>2</sub> <b>B</b>&middot;d<b>l</b> + &int;<sub>3</sub> <b>B</b>&middot;d<b>l</b> + &int;<sub>4</sub> <b>B</b>&middot;d<b>l</b><br><br>
       - <strong>Side 1 (Inside):</strong> B and dl are parallel. Integral = B &middot; l<br>
-      - <strong>Sides 2 & 4 (Crossing):</strong> B is perpendicular to dl (dot product = 0). Integral = 0<br>
+      - <strong>Sides 2 &amp; 4 (Crossing):</strong> B is perpendicular to dl (dot product = 0). Integral = 0<br>
       - <strong>Side 3 (Outside):</strong> B &approx; 0 outside an ideal solenoid. Integral = 0<br><br>
       Summing them up: &oint; <b>B</b> &middot; d<b>l</b> = Bl + 0 + 0 + 0 = <strong>Bl</strong></div>
-      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Current</strong><br>
+      <div class="derivation-step"><strong>Step 3: Calculate Enclosed Current</strong>
       The rectangular loop encloses a certain number of wire turns. Since there are 'n' turns per unit length, a length 'l' encloses (n &times; l) turns. Each turn carries current I.<br>
       I<sub>encl</sub> = (n &times; l) &times; I</div>
-      <div class="derivation-step"><strong>Step 4: Apply Ampere's Law</strong><br>
+      <div class="derivation-step"><strong>Step 4: Apply Ampere's Law</strong>
       Bl = &mu;<sub>0</sub> (n &middot; l &middot; I)</div>
-      <div class="derivation-step"><strong>Final Result:</strong><br>
+      <div class="derivation-step"><strong>Final Result:</strong>
       Cancel the length 'l' on both sides to get:<br>
       <strong>B = &mu;<sub>0</sub> n I</strong><br>
       <em>(Or B = &mu;<sub>0</sub>(N/L)I ). Notice the field is independent of the solenoid's radius!</em></div>
@@ -704,10 +913,9 @@ function show(id, el) {
   document.getElementById(id).classList.add('visible');
   el.classList.add('active');
   
-  // Optional: smooth scroll to top of content when tab is clicked
+  // Smooth scroll to top of content when tab is clicked
   window.scrollTo({ top: document.querySelector('.nav').offsetTop - 10, behavior: 'smooth' });
 }
 </script>
 </body>
-
 </html>
